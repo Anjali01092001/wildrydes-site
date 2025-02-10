@@ -7,15 +7,13 @@ var WildRydes = window.WildRydes || {};
 
     var poolData = {
         UserPoolId: _config.cognito.userPoolId,
-        ClientId: _config.cognito.userPoolClientId,
-        ClientSecret: _config.cognito.clientSecret
+        ClientId: _config.cognito.userPoolClientId
     };
 
     var userPool;
 
     if (!(_config.cognito.userPoolId &&
           _config.cognito.userPoolClientId &&
-          _config.cognito.clientSecret &&
           _config.cognito.region)) {
         $('#noCognitoMessage').show();
         return;
